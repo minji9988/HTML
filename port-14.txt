@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+   
+
+    
+    <title> Reeker's Web page </title>
+    
+   <link rel="stylesheet" type="text/css" href ="port.css">
+    </head>
+
+    <body>
+        
+        <!-- <h5 id="reeker"> reeker's entertainment </h5> -->
+
+        <ul id ="dropdown">
+            <li class="dropdown" id="dropdown">
+                <a href=""> FASHION </a>
+            </li>
+
+            <li class="dropdown" id="dropdown">
+                <a href=""> BEAUTY </a>
+            </li>
+
+            <li class="dropdown" id="dropdown">
+                <a href=""> STAR </a>
+                    <div class="dropdown-content">
+                        <a href=""> </a>
+                        <a href=""> INTERVIEW</a>
+                        <a href=""> GOSSIP </a>
+                        <a href=""> CELEB NEWS </a>
+
+                    </div>
+            </li>
+
+            <li class="dropdown" id="dropdown">
+                <a href=""> CULTURE </a>
+            </li>
+
+            <li class="dropdown" id="dropdown">
+                <a href=""> STORY </a>
+            </li>
+
+        </ul>
+   
+        <h1 id="hill"> H I L L </h1>
+      
+        <img src="woman.jpg" id="woman"width="500" height="700"alt="woman">
+
+        <div id="gray"> 
+            <ul id="gray_ul">
+
+                <li> <h2> San-Karilam </h2></li>
+                <li> 2023 CEO of HILL company </li>
+                <li> 2022 Challenge model USA 3 Winner </li>
+                <li> 2020 Fashion Week Prada, Gucci models</li>
+                <li> 2018 Bottega Veneta, Marni Fashion Show Model</li>
+                <li> 2017 Commendation from the Minister of Culture </li>
+    
+
+            </ul>       
+        </div>
+
+         <div id="jominji"> 202025003-jominji </div>
+
+    </body>
+</html>
+
