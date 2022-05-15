@@ -1,0 +1,83 @@
+         
+         /* 드랍menu 내렸을 때 글자겹침 해결 */
+         /* left에 sign in make */
+         
+
+
+
+         #logo{margin-left: 60px; margin-top: 3px; 
+                margin-bottom: 0px; padding: 0%; 
+                width: 130px; height: 55px; position: absolute;}
+
+         #woman{margin-left: 220px; margin-top: 150px;
+                position: absolute;}
+            /* 1번째 줄 아이디 선택자 */
+            
+        #hill {text-align: center; font-size: 60px; 
+                margin-top: 2%; position: absolute; 
+                left: 680px;}
+    
+         h4 {right: 100px; top: 100%; margin-left: 30px;}
+            /* 3번째 줄 태그 선택자 */
+
+            ul {padding: 6px; text-align: center;
+                margin: 0 auto; 
+                margin-top: 0%; font-size: 20px; z-index: 999;}
+            
+            #dropdown {padding: 20px 0px; text-align: center;
+                      }
+            /* 7번째 줄 margin, padding, */
+            li a {color: black; text-decoration: none; 
+                  padding: 5px 10px; text-align: center;
+                    position: absolute;}
+
+            li a:hover {background: darkgray; text-align: center;} 
+            /* 12번. 가상클래스 */
+            
+            li.dropdown {display: inline-block; 
+                text-align: center; width: 100px; 
+                position: relative;}
+
+            /* 18번째 줄 display */
+
+            .dropdown-content { display: none;
+                background-color: ghostwhite;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+            /* 19번째 줄 클래스 선택자     */
+
+
+            .dropdown-content a {display: block; color: black; 
+                    padding: 12px 16px;
+                    text-decoration: none; text-align: center}
+            
+            .dropdown-content a:hover {background-color: rgb(196, 196, 196);}
+            .dropdown:hover .dropdown-content {display: block;}        
+            
+
+            #list_list {
+                text-align: right; position: absolute; 
+                left:900px; top: 500px;
+            }
+
+            #gray { position: absolute; left:780px; 
+                    top: 320px; width: 450px; height: 500px;
+                    padding: 10px; margin-bottom: 15px;}
+            
+            /* 39번째 줄 position     */
+
+            #gray_ul {list-style: none; font-size: 120%; 
+                        text-align: left; line-height: 200%;} 
+            #jominji { writing-mode: sideways-lr;
+                        transform: rotate(270deg);
+                        position: absolute; left: 145px;
+                        bottom: 374px; color: rgb(81, 81, 81);
+                        }
+            
+            h2::first-letter{font-size: 160%;} 
+            /* 50번째 줄 가상 요소     */
+
+            table, tr, td {
+                border: none;
+                position: sticky; margin-top: 50%;
+                left: 71%; font-size: 15px;
+            }
