@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="ui.css">
+
+</head>
+<body>
+
+
+
+    <div id="wrap">
+        <form class="login_form">
+            <h1> Hi! Welcome to Reeker's web page </h1>
+            <P> <input id="id" type="text" placeholder="ID"></P>
+            <P><input id="password" type="password" placeholder="PASSWORD"></P>
+            <button id="btn">LOGIN</button>
+        </form>
+    </div>
+
+    <script>
+
+                document.querySelector("#btn").addEventListener("click", () => {
+                const id = "samuel";
+                const password = "wjsansrk";
+            
+                if(id == document.querySelector("#id").value) {
+                    if(password == document.querySelector("#password").value) {
+                        alert("환영합니다!");
+                        document.write("Welcome to Samuel!")
+                    }
+                    else {
+                        alert("비밀번호가 맞지 않습니다.");
+                    }
+                }
+                else {
+                    alert("아이디 혹은 비밀번호가 맞지 않습니다.");
+                }
+            });
+
+
+    </script>
+</body>
+</html>
