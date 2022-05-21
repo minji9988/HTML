@@ -1,0 +1,123 @@
+#include <stdio.h>
+#ifndef __BINARY_TREE3_H__
+#define __BINARY_TREE3_H__
+
+typedef int BTData;
+
+typedef struct _bTreeNode
+{
+	BTData data;
+	struct _bTreeNode * left;
+	struct _bTreeNode * right;
+} BTreeNode;
+
+BTreeNode * MakeBTreeNode(void);
+BTData GetData(BTreeNode *bt);
+void SetData(BTreeNode * bt, BTData data);
+
+BTreeNode * GetLeftSubTree(BTreeNode * bt);
+BTreeNode * GetRightSubTree(BTreeNode * bt);
+
+void MakeLeftSubTree(BTreeNode * main, BTreeNode * sub);
+void MakeRightSubTree(BTreeNode * main, BTreeNode * sub);
+
+typedef void VisitFuncPtr(BTData data);
+
+void PreorderTraverse(BTreeNode * bt, VisitFuncPtr action);
+void InorderTraverse(BTreeNode *bt, VisitFuncPtr action);
+void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action);
+
+//remove left child node. 제거된 node의 address 값이 return됨.
+
+BTreeNode * RemoveLeftSubTree(BTreeNode * bt);
+
+//remove right child node.
+BTreeNode * RemoveRightSubTree(BTreeNode * bt);
+ 
+// memory 소멸을 수반하지 않고 change main의 left node
+void ChangeLeftSubTree(BTreeNode * main, BTreeNode * sub);
+
+void ChangeRightSubTree(BTreeNode * main, BTreeNode * sub);
+
+#endif 
+
+
+
+
+
+///////////////////////////
+
+
+#ifndef __BINARY_SEARCH_TREE3_H__
+#define __BINARY_SEARCH_TREE3_H__
+
+#include "BinaryTree3.h"
+
+typedef BTData BSTData;
+
+//이진 탐색 tree의 생성 및 초기화 
+void BSTMakeAndInit(BTreeNode ** pRoot);
+
+//Return node에 save된 data
+BSTData BSTGetNodeData(BTreeNode * bst);
+
+//이진 탐색 트리를 대상으로 데이터 저장(노드의 생성과정 포함)
+void BSTInsert(BTreeNode ** pRoot, BSTData data);
+
+// 이진 탐색 트리를 대상으로 데이터 탐색
+BTreeNode * BSTSearch(BTreeNode * bst, BSTData target);
+
+//트리에서 노드를 제거하고 제거된 노드의 주소 값을 반환한다.
+BTreeNode * BSTRemove(BTreeNode ** pRoot, BSTData target);
+
+//이진 탐색 트리에 저장된 모든 노드의 데이터를 출력한다.
+void BSTShowAll(BTreeNode * bst);
+
+#endif 
+
+
+/////////////////////////////////////////
+
+
+#include "BinaryTree3.h"
+#include "BinarySearchTree3.h"
+
+int main(void)
+{
+	BTreeNode * avlRoot;
+	BTreeNode * clNode;
+	BTreeNode * crNode;
+	BSTMakeAndInit(&avlRoot);
+	
+	BSTInsert(&avlRoot, 1);
+	BSTInsert(&avlRoot, 2);
+	BSTInsert(&avlRoot, 3);
+	BSTInsert(&avlRoot, 4);
+	BSTInsert(&avlRoot, 5);
+	BSTInsert(&avlRoot, 6);
+	BSTInsert(&avlRoot, 7);
+	BSTInsert(&avlRoot, 8);
+	BSTInsert(&avlRoot, 9);
+
+	printf("root node: %d \n", GetData(avlRoot));
+	
+	clNode = GetLeftSubTree(avlRoot);
+	crNode = GetRightSubTree(avlRoot);
+	printf("left1: %d, right1: %d \n", GetData(clNode), GetData(crNode));
+	
+	clNode = GetLeftSubTree(clNode);
+	crNode = GetRightSubTree(crNode);
+	printf("left2: %d, right2: %d \n", GetData(clNode), GetData(crNode));
+	
+	clNode = GetLeftSubTree(clNode);
+	crNode = GetRightSubTree(crNode);
+	printf("left3: %d, right3: %d \n", GetData(clNode), GetData(crNode));
+	
+	clNode = GetLeftSubTree(clNode);
+	crNode = GetRightSubTree(crNode);
+	printf("left4: %d, right4: %d \n", GetData(clNode), GetData(crNode));
+	
+	return 0;
+
+}
+
