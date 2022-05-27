@@ -4,14 +4,42 @@
     <title>Login</title>
     <link rel="stylesheet" href="ui.css">
 
+    <style>
+
+        /* #gray_box{width: 700px; height: 600px;
+        background-color: rgb(228, 228, 228);
+        position: absolute; left: 440px; top: 70px;} */
+
+        #login_title { text-align: center; 
+            font-size: 50px; position: absolute;
+            left: 720px; top: 100px;}
+
+        #id {border: none; outline: none;  border-bottom: 3px solid lightgray; 
+            position: absolute; left: 650px; top: 270px;
+            width: 300px; height: 70px; font-size: 15px; text-align: unset;}
+        
+        #password { border: none; outline: none;  border-bottom: 3px solid lightgray; 
+        position: absolute; left: 650px; top: 360px;
+        width: 300px; height: 70px; font-size: 15px;}
+        
+        #btn {position: absolute;
+        left: 650px; width: 300px; height: 70px; top: 500px;
+        font-size: 20px;
+        color: white; background-color: black;}
+
+    </style>
+
+
 </head>
 <body>
 
 
+    <!-- <div id="gray_box"></div> -->
 
     <div id="wrap">
         <form class="login_form">
-            <h1> Hi! Welcome to Reeker's web page </h1>
+            <h1 id="login_title"> Log in </h1>
+
             <P> <input id="id" type="text" placeholder="ID"></P>
             <P><input id="password" type="password" placeholder="PASSWORD"></P>
             <button id="btn">LOGIN</button>
@@ -26,7 +54,6 @@
             
                 if(id == document.querySelector("#id").value) {
                     if(password == document.querySelector("#password").value) {
-                        alert("환영합니다!");
                         document.write("Welcome to Samuel!")
                     }
                     else {

@@ -1,6 +1,7 @@
 
-#sign {font-size: 100%; position: absolute; 
-    left: 80%; top: 32px; font-weight: 800; }
+#sign {font-size: 103%; position: absolute; 
+    left: 80%; top: 32px; font-weight: 800;
+    text-decoration: none; color: black;}
 
 #logo{left: 60px; top: 15px; 
     margin-bottom: 0px; padding: 0%; 
@@ -8,14 +9,14 @@
 
 #woman{margin-left: 220px; margin-top: 160px;
     position: absolute;}
-/* 1번째 줄 아이디 선택자 */
+/* 아이디 선택자 #woman 적용*/
 
 #hill {text-align: center; font-size: 60px; 
     top: 12%; position: absolute; 
     left: 666px;}
 
 h4 {right: 100px; top: 100%; margin-left: 30px;}
-/* 3번째 줄 태그 선택자 */
+/* 태그 선택자 h4 적용 */
 
 ul {padding: 6px; text-align: center;
     margin: 0 auto; 
@@ -23,25 +24,26 @@ ul {padding: 6px; text-align: center;
 
 #dropdown {padding: 20px 0px; text-align: center;
         margin-top: 47px; }
-/* 7번째 줄 margin, padding, */
+/* margin, padding 적용 */
 
 li a {color: black; text-decoration: none; 
         padding: 5px 10px; text-align: center;
         position: relative;}
 
 li a:hover {background: darkgray; text-align: center;} 
-/* 12번. 가상클래스 */
+/* 가상클래스 적용해서 리스트 목록에 마우스 올렸을 시 배경색은
+ 회색으로, 문자 정렬은 정중앙으로 해놓음.*/
 
 li.dropdown {display: inline-block; 
     text-align: center; width: 100px; 
     position: relative;}
 
-/* 18번째 줄 display */
+/* display 적용으로 수평메뉴를 수평으로 정렬될 수 있게 함.*/
 
 .dropdown-content { display: none; position: absolute;
     background-color: ghostwhite;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
-/* 19번째 줄 클래스 선택자     */
+/* 클래스 선택자 적용*/
 
 
 .dropdown-content a {display: block; color: black; 
@@ -61,7 +63,7 @@ li.dropdown {display: inline-block;
         top: 320px; width: 450px; height: 500px;
         padding: 10px; margin-bottom: 15px;}
 
-/* 39번째 줄 position     */
+/* position 적용*/
 
 #gray_ul {list-style: none; font-size: 120%; 
             text-align: left; line-height: 200%;} 
@@ -72,7 +74,7 @@ li.dropdown {display: inline-block;
             }
 
 h2::first-letter{font-size: 160%;} 
-/* 50번째 줄 가상 요소     */
+/* 가상 요소 적용. San-Karilam에서 S 문자가 커짐.  */
 
 #email{position: absolute; top: 817px; left: 1057px;}
 #phone{position: absolute; top: 850px; left: 1057px;}
@@ -96,9 +98,8 @@ table, tr, td {
     position: relative; line-height: 110%;}
 
 .ADD2 {position: relative; left: 85%;
-       bottom: 17px; color: black;  visibility: hidden;}
+       bottom: 17px; }
 
-.ADD2 a {text-decoration: none;}
+.ADD2 a {text-decoration: none; color: black;}
 
-
-.ADD1:hover > .ADD2{visibility: visible;}
+/* .ADD1:hover .ADD2{display: block;} */
