@@ -6,9 +6,10 @@
 
     <style>
 
-        /* #gray_box{width: 700px; height: 600px;
-        background-color: rgb(228, 228, 228);
-        position: absolute; left: 440px; top: 70px;} */
+        /* input box color input tag 박스에 글자 입력 시 파랑색 변경 방지 코드 */
+        input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: #000; }
+        input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
+
 
         #login_title { text-align: center; 
             font-size: 50px; position: absolute;
@@ -54,7 +55,7 @@
             
                 if(id == document.querySelector("#id").value) {
                     if(password == document.querySelector("#password").value) {
-                        document.write("Welcome to Samuel!")
+                    Response.sendRedirect("portfolio.html");
                     }
                     else {
                         alert("비밀번호가 맞지 않습니다.");
