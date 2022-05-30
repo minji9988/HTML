@@ -15,7 +15,7 @@
             font-size: 50px; position: absolute;
             left: 720px; top: 100px;}
 
-        #id {border: none; outline: none;  border-bottom: 3px solid lightgray; 
+        .id {border: none; outline: none;  border-bottom: 3px solid lightgray; 
             position: absolute; left: 600px; top: 240px;
             width: 400px; height: 70px; font-size: 18px; text-align: unset;}
         
@@ -46,7 +46,7 @@
         <form class="login_form" action="">
             <h1 id="login_title"> Log in </h1>
 
-            <P> <input id="id" name="id" type="text" placeholder="ID"></P>
+            <P> <input class="id" name="id" type="text" placeholder="ID"></P>
             <P><input id="password" name="pw" type="password" placeholder="PASSWORD"></P>
             <button id="btn">LOGIN</button>
         </form>
@@ -54,22 +54,23 @@
 
     <script>
 
-                document.querySelector("#btn").addEventListener("click", () => {
-                const id = "samuel"; "minji";
-                const password = "wjsansrk";
-            
-                if(id == document.querySelector("#id").value) {
-                    if(password == document.querySelector("#password").value) {
-                    Response.sendRedirect("portfolio.html");
-                    }
-                    else {
-                        alert("비밀번호가 맞지 않습니다.");
-                    }
+            document.querySelector("#btn").addEventListener("click", () => {
+            const id = "samuel"; "minji"
+            const password = "wjsansrk";
+        
+            if(id == document.querySelector(".id").value) {
+                if(password == document.querySelector("#password").value) {
+                    alert(`${id}님 반갑습니다.`)    
                 }
+
                 else {
-                    alert("아이디 혹은 비밀번호가 맞지 않습니다.");
+                    alert("비밀번호가 맞지 않습니다.");
                 }
-            });
+            }
+                else {
+                alert("아이디 혹은 비밀번호가 맞지 않습니다.");
+            }
+        });
 
 
     </script>
